@@ -1,0 +1,34 @@
+@TodoApi_HostAddress = https://localhost:7082
+
+### Listar todas as tarefas
+GET {{TodoApi_HostAddress}}/todo
+Accept: application/json
+
+###
+
+### Adicionar uma tarefa
+POST {{TodoApi_HostAddress}}/todo
+Content-Type: application/json
+
+{
+  "name": "Estudar programação",
+  "isComplete": false
+}
+
+###
+
+### Atualizar uma tarefa
+PUT {{TodoApi_HostAddress}}/todo/1
+Content-Type: application/json
+
+{
+  "name": "Estudar programação",
+  "isComplete": true
+}
+
+###
+
+### Excluir uma tarefa
+DELETE {{TodoApi_HostAddress}}/todo/1
+
+###
